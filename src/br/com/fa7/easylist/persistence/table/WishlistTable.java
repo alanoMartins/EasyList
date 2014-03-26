@@ -13,4 +13,7 @@ public class WishlistTable extends AppTable {
 			+ " integer primary key autoincrement, " + COLUMN_NAME
 			+ " text not null, " + COLUMN_DESCRIPTION + " text, "
 			+ COLUMN_TOTAL + " decimal" + ");";
+	
+	public static final String[] ALLCOLUMN ={ COLUMN_ID, COLUMN_NAME, COLUMN_DESCRIPTION, COLUMN_TOTAL };
+	
 }

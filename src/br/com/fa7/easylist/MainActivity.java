@@ -1,26 +1,25 @@
 package br.com.fa7.easylist;
 
-import roboguice.inject.InjectView;
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import br.com.fa7.easylist.models.Item;
+import br.com.fa7.easylist.persistence.ItemStorage;
 
 public class MainActivity extends Activity {
 
-	@InjectView(R.layout.activity_main) View main_view;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(main_view);
-
+        setContentView(R.layout.activity_main);
+        
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
